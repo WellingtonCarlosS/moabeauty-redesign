@@ -1,720 +1,1869 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Moany Rocha Beauty | Designer de sobrancelhas e micropigmentação</title>
-<meta name="description" content="Moany Rocha, designer de sobrancelhas e micropigmentadora. Micropigmentação Shadow, design com epilação egípcia e brow lamination. Agende pelo WhatsApp.">
-<meta name="theme-color" content="#faf7f5">
-<link rel="icon" href="img/logo-monograma.png" type="image/png">
-<link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.add("js")</script>
-<style>
-@font-face { font-family: "Instrument Serif"; src: url("fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Figtree"; src: url("fonts/figtree-latin-wght-normal.woff2") format("woff2"); font-weight: 300 900; font-style: normal; font-display: swap; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Moany Rocha Beauty | Designer de sobrancelhas e micropigmentação</title>
+  <meta name="description"
+    content="Moany Rocha, designer de sobrancelhas e micropigmentadora. Micropigmentação Shadow, design com epilação egípcia e brow lamination. Agende pelo WhatsApp.">
+  <meta name="theme-color" content="#faf7f5">
+  <link rel="icon" href="img/logo-monograma.png" type="image/png">
+  <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js")</script>
+  <style>
+    @font-face {
+      font-family: "Instrument Serif";
+      src: url("fonts/instrument-serif-latin-400-normal.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-/* ---------- tokens (derivados do logo: bronze-rosado, cacau e dourado do monograma) ---------- */
-:root {
-  color-scheme: light;
-  --ground: #faf7f5;
-  --surface: #f2ece9;
-  --soft: #e8dfda;
-  --ink: #2a1a14;
-  --muted: #6a554d;
-  --rose: #8c5a4a;
-  --rose-deep: #6f4436;
-  --cocoa: #2a1a13;
-  --gold: #e8d2a0;
-  --guide: #cfb68a;
-  --on-cocoa: #f6ede7;
-  --on-cocoa-muted: #d3c0b4;
+    @font-face {
+      font-family: "Figtree";
+      src: url("fonts/figtree-latin-wght-normal.woff2") format("woff2");
+      font-weight: 300 900;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
-  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* ---------- tokens (derivados do logo: bronze-rosado, cacau e dourado do monograma) ---------- */
+    :root {
+      color-scheme: light;
+      --ground: #faf7f5;
+      --surface: #f2ece9;
+      --soft: #e8dfda;
+      --ink: #2a1a14;
+      --muted: #6a554d;
+      --rose: #8c5a4a;
+      --rose-deep: #6f4436;
+      --cocoa: #2a1a13;
+      --gold: #e8d2a0;
+      --guide: #cfb68a;
+      --on-cocoa: #f6ede7;
+      --on-cocoa-muted: #d3c0b4;
 
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-  --radius: 20px;
-  --t-small: 15px;
-  --t-body: 17px;
-  --t-lead: 19px;
-  --t-h3: clamp(1.8rem, 2.6vw, 2.1rem);
-  --t-h2: clamp(2.3rem, 4.4vw, 3.4rem);
-  --t-display: clamp(2.7rem, 5.2vw, 4.7rem);
-  interpolate-size: allow-keywords;
-}
+      --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+      --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; scrollbar-color: var(--guide) var(--ground); }
-body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.65; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; }
-[hidden] { display: none !important; }
-a { color: inherit; text-underline-offset: 0.22em; }
-::selection { background: var(--gold); color: var(--cocoa); }
-:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; border-radius: 6px; }
-.on-cocoa :focus-visible, .cocoa :focus-visible { outline-color: var(--gold); }
-.skip { position: absolute; left: 12px; top: -64px; z-index: 50; background: var(--cocoa); color: var(--on-cocoa); padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: top 160ms var(--ease-out); }
-.skip:focus { top: 12px; }
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+      --radius: 20px;
+      --t-small: 15px;
+      --t-body: 17px;
+      --t-lead: 19px;
+      --t-h3: clamp(1.8rem, 2.6vw, 2.1rem);
+      --t-h2: clamp(2.3rem, 4.4vw, 3.4rem);
+      --t-display: clamp(2.7rem, 5.2vw, 4.7rem);
+      interpolate-size: allow-keywords;
+    }
 
-.wrap {
-  max-width: 1200px; margin: 0 auto;
-  padding-left: max(20px, env(safe-area-inset-left, 0px));
-  padding-right: max(20px, env(safe-area-inset-right, 0px));
-}
+    * {
+      box-sizing: border-box;
+    }
 
-/* ---------- header ---------- */
-.top { position: sticky; top: 0; z-index: 20; background: var(--ground); padding-top: env(safe-area-inset-top, 0px); transition: background-color 200ms var(--ease-out); }
-.top.scrolled { background: var(--surface); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; line-height: 1.1; min-width: 0; }
-.brand img { display: block; height: 38px; width: auto; }
-.brand b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; letter-spacing: 0.005em; }
-.brand small { display: block; font-size: var(--t-small); color: var(--muted); margin-top: 2px; }
-.nav { display: flex; align-items: center; gap: 28px; font-size: var(--t-small); }
-.nav-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--soft); border-radius: 50%; background: var(--ground); color: var(--ink); cursor: pointer; }
-.nav-toggle svg { display: block; width: 21px; height: 21px; }
-.nav a:not(.btn) { color: var(--muted); text-decoration: none; padding-block: 10px; position: relative; transition: color 160ms var(--ease-out); }
-.nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px; background: var(--rose); transform: scaleX(0); transform-origin: left; transition: transform 240ms var(--ease-out); }
-.progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--rose); transform-origin: left; transform: scaleX(var(--p, 0)); pointer-events: none; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+      -webkit-text-size-adjust: 100%;
+      scrollbar-color: var(--guide) var(--ground);
+    }
 
-/* ---------- buttons ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; min-height: 48px; border: 0; border-radius: 999px; font: 600 var(--t-small)/1.2 var(--font-body); text-decoration: none; text-align: center; cursor: pointer; transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
-.btn:active { transform: scale(0.97); }
-.btn.primary { background: var(--rose); color: #fff; }
-.btn.ghost { background: var(--soft); color: var(--rose-deep); }
-.btn.gold { background: var(--gold); color: var(--cocoa); }
-.nav .btn { padding: 10px 22px; min-height: 44px; }
-@media (hover: hover) and (pointer: fine) {
-  .nav a:not(.btn):hover { color: var(--ink); }
-  .nav a:not(.btn):hover::after { transform: scaleX(1); }
-  .btn.primary:hover { background: var(--rose-deep); }
-  .btn.ghost:hover { background: #dfd2ca; }
-  .btn.gold:hover { background: #f3e1b6; }
-}
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* ---------- arco: a moldura do site ecoa o arco da sobrancelha ---------- */
-.arch { margin: 0; aspect-ratio: 4 / 5; border-radius: 999px 999px 22px 22px; overflow: hidden; background: var(--soft); }
-.arch img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    img {
+      max-width: 100%;
+    }
 
-/* ---------- hero ---------- */
-.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(32px, 6vw, 88px); align-items: center; padding-block: clamp(28px, 5vw, 64px) clamp(48px, 7vw, 96px); }
-h1 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-display); line-height: 1.02; letter-spacing: -0.015em; margin: 0 0 24px; text-wrap: balance; }
-.lead { max-width: 31em; margin: 0 0 32px; font-size: var(--t-lead); color: var(--muted); }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.fine { margin: 22px 0 0; font-size: var(--t-small); color: var(--muted); }
-.num { font-weight: 600; color: var(--ink); white-space: nowrap; }
-.hero-photo { width: min(100%, 470px); justify-self: end; }
-.hero-photo img { scale: 1.06; transform-origin: 50% 40%; }
+    [hidden] {
+      display: none !important;
+    }
 
-/* ---------- faixa de princípios (campo cacau) ---------- */
-.cocoa { background: var(--cocoa); color: var(--on-cocoa); }
-.principles .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 5vw, 72px); padding-block: 56px; }
-.principles h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h3); line-height: 1.1; margin: 0 0 10px; color: var(--gold); }
-.principles p { margin: 0; color: var(--on-cocoa-muted); font-size: var(--t-body); max-width: 24em; }
+    a {
+      color: inherit;
+      text-underline-offset: 0.22em;
+    }
 
-/* ---------- seções ---------- */
-section { padding-block: clamp(64px, 9vw, 120px); }
-h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h2); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 18px; text-wrap: balance; }
-h3 { text-wrap: balance; }
-.sec-lead { max-width: 36em; color: var(--muted); margin: 0 0 clamp(32px, 5vw, 56px); font-size: var(--t-lead); }
-.alt { background: var(--surface); }
+    ::selection {
+      background: var(--gold);
+      color: var(--cocoa);
+    }
 
-.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
-.about p { margin: 0 0 16px; max-width: 34em; color: var(--muted); font-size: var(--t-lead); }
-.about p:last-child { margin: 0; }
-.about-photo { margin: 0; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--soft); }
-.about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+    :focus-visible {
+      outline: 3px solid var(--rose);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
 
-/* ---------- método ---------- */
-.method { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 7vw, 104px); align-items: start; }
-.method-side { position: sticky; top: 110px; }
-.diagram { margin: 8px 0 0; max-width: 440px; }
-.diagram svg { display: block; width: 100%; height: auto; }
-.diagram figcaption { font-size: var(--t-small); color: var(--muted); margin-top: 6px; }
-.g-line { stroke: var(--guide); stroke-width: 1.4; fill: none; }
-.g-dash { stroke: var(--guide); stroke-width: 1.4; stroke-dasharray: 4 6; fill: none; }
-.g-brow { stroke: var(--rose); stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-.g-dot { fill: var(--surface); stroke: var(--ink); stroke-width: 2.4; }
-.g-txt { fill: var(--muted); font-family: var(--font-body); font-size: 15px; font-weight: 500; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 34px; counter-reset: s; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px 20px; align-items: start; }
-.steps li::before { content: counter(s); font-family: var(--font-display); font-size: var(--t-h2); line-height: 0.9; color: var(--rose); grid-row: 1 / span 2; font-variant-numeric: lining-nums; }
-.steps h3 { margin: 0; font-size: var(--t-lead); font-weight: 600; line-height: 1.3; }
-.steps p { margin: 0; color: var(--muted); font-size: var(--t-body); max-width: 32em; }
+    .on-cocoa :focus-visible,
+    .cocoa :focus-visible {
+      outline-color: var(--gold);
+    }
 
-/* ---------- serviços ---------- */
-.svc { display: grid; gap: clamp(64px, 9vw, 120px); }
-.svc-row { display: grid; grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); gap: clamp(32px, 7vw, 104px); align-items: center; }
-.svc-row .arch { width: min(100%, 400px); justify-self: center; }
-.svc-row:nth-child(even) { grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr); }
-.svc-row:nth-child(even) .arch { order: 2; }
-.svc h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h3); line-height: 1.08; margin: 0 0 14px; }
-.svc .pitch { margin: 0 0 26px; color: var(--muted); font-size: var(--t-lead); max-width: 34em; }
-.svc .pitch strong { color: var(--ink); font-weight: 600; }
-.svc h4 { margin: 0 0 12px; font-size: var(--t-small); font-weight: 600; color: var(--rose-deep); }
-.checks { margin: 0 0 26px; padding: 0; list-style: none; display: grid; gap: 10px; max-width: 34em; }
-.checks li { padding-left: 30px; position: relative; font-size: var(--t-body); }
-.checks li::before { content: ""; position: absolute; left: 6px; top: 0.4em; width: 6px; height: 12px; border: solid var(--rose); border-width: 0 2px 2px 0; transform: rotate(45deg); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
-.chips span { background: var(--soft); border-radius: 999px; padding: 7px 15px; font-size: var(--t-small); }
-.assure { list-style: none; margin: 44px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 44px; color: var(--muted); font-size: var(--t-body); }
-.assure li { position: relative; padding-left: 20px; }
-.assure li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; border-radius: 50%; background: var(--guide); }
-.unsure { margin-top: 40px; background: var(--soft); border-radius: 28px; padding: clamp(28px, 4vw, 44px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-.unsure h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h3); line-height: 1.1; margin: 0 0 6px; }
-.unsure p { margin: 0; color: var(--muted); max-width: 32em; }
-.unsure .btn { background: var(--ground); color: var(--rose-deep); }
-@media (hover: hover) and (pointer: fine) { .unsure .btn:hover { background: #fff; } }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -64px;
+      z-index: 50;
+      background: var(--cocoa);
+      color: var(--on-cocoa);
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: top 160ms var(--ease-out);
+    }
 
-/* ---------- trabalhos ---------- */
-.carousel { --h: clamp(400px, 64vh, 560px); }
-.track { display: flex; align-items: center; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; overscroll-behavior-x: contain; cursor: grab; border-radius: 16px; }
-.track::-webkit-scrollbar { display: none; }
-.track.drag { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
-.slide { flex: 0 0 auto; height: var(--h); margin: 0; border-radius: 16px; overflow: hidden; scroll-snap-align: start; background: var(--soft); opacity: calc(0.55 + 0.45 * var(--a, 1)); }
-.slide img { display: block; height: 100%; width: auto; max-width: none; -webkit-user-drag: none; user-select: none; }
-.car-ctl { display: flex; align-items: center; gap: 24px; margin-top: 24px; }
-.car-count { font-family: var(--font-display); font-size: 1.6rem; line-height: 1; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.car-count b { font-weight: 400; color: var(--rose); }
-.car-bar { flex: 1; height: 4px; background: var(--soft); border-radius: 4px; overflow: hidden; }
-.car-bar span { display: block; height: 100%; background: var(--rose); border-radius: 4px; transform-origin: left; transform: scaleX(0.2); transition: transform 200ms var(--ease-out); }
-.car-btns { display: flex; gap: 10px; }
-.car-btn { width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--soft); color: var(--rose-deep); display: grid; place-items: center; cursor: pointer; padding: 0; transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out), opacity 160ms var(--ease-out); }
-.car-btn:active:not(:disabled) { transform: scale(0.95); }
-.car-btn:disabled { opacity: 0.35; cursor: default; }
-@media (hover: hover) and (pointer: fine) { .car-btn:hover:not(:disabled) { background: var(--rose); color: #fff; } }
-.more { margin: 28px 0 0; }
-.more a { color: var(--rose-deep); font-weight: 600; }
+    .skip:focus {
+      top: 12px;
+    }
 
-/* ---------- dúvidas ---------- */
-.faq-wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(32px, 7vw, 104px); align-items: start; }
-.faq-intro { position: sticky; top: 110px; }
-.faq-intro .sec-lead { margin-bottom: 28px; }
-.faq-list { display: grid; gap: 10px; }
-details { background: var(--surface); border-radius: 18px; transition: background-color 200ms var(--ease-out); }
-details[open] { background: var(--soft); }
-summary { cursor: pointer; list-style: none; padding: 20px 56px 20px 24px; min-height: 60px; font-weight: 600; font-size: var(--t-body); position: relative; border-radius: 18px; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; position: absolute; right: 22px; top: 50%; font-size: 1.7rem; font-weight: 400; line-height: 1; color: var(--rose); transform: translateY(-50%); transition: transform 220ms var(--ease-out); }
-details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-details p { margin: 0; padding: 0 24px 22px; color: var(--muted); max-width: 40em; }
-details::details-content { block-size: 0; overflow: clip; transition: block-size 260ms var(--ease-out), content-visibility 260ms var(--ease-out) allow-discrete; }
-details[open]::details-content { block-size: auto; }
-@media (hover: hover) and (pointer: fine) { details:not([open]):hover { background: var(--soft); } }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: max(20px, env(safe-area-inset-left, 0px));
+      padding-right: max(20px, env(safe-area-inset-right, 0px));
+    }
 
-/* ---------- contato ---------- */
-.cta-sec { padding-block: clamp(72px, 10vw, 136px); }
-.cta { display: grid; gap: 22px; justify-items: start; }
-.cta h2 { color: var(--on-cocoa); max-width: 14em; margin: 0; font-size: var(--t-display); }
-.cta p { margin: 0; color: var(--on-cocoa-muted); max-width: 32em; font-size: var(--t-lead); }
-.cta .num { color: var(--gold); }
-.cta-actions { display: flex; gap: 12px 24px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
-.cta-actions a:not(.btn) { color: var(--on-cocoa); font-weight: 600; }
+    /* ---------- header ---------- */
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--ground);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: background-color 200ms var(--ease-out);
+    }
 
-/* ---------- rodapé ---------- */
-footer { background: var(--ground); }
-.foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding-block: 56px 40px; }
-.foot img { display: block; width: 260px; max-width: 100%; height: auto; }
-.foot-info { color: var(--muted); font-size: var(--t-small); display: grid; gap: 6px; justify-items: end; text-align: right; }
-.foot-info a { color: var(--rose-deep); font-weight: 600; }
+    .top.scrolled {
+      background: var(--surface);
+    }
 
-.fab { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 25; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; background: var(--rose); color: #fff; padding: 13px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1; transition: background-color 160ms var(--ease-out), transform 160ms var(--ease-out), opacity 200ms var(--ease-out), visibility 200ms; }
-.fab.away { opacity: 0; visibility: hidden; pointer-events: none; }
-.fab:active { transform: scale(0.97); }
-@media (hover: hover) and (pointer: fine) { .fab:hover { background: var(--rose-deep); } }
+    .top .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 12px;
+    }
 
-/* ---------- responsivo ---------- */
-@media (max-width: 1000px) {
-  .method, .faq-wrap { grid-template-columns: minmax(0, 1fr); }
-  .method-side, .faq-intro { position: static; }
-  .diagram { max-width: 400px; }
-}
-@media (max-width: 860px) {
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 20px 56px; }
-  .hero-photo { justify-self: center; width: min(100%, 360px); }
-  .about { grid-template-columns: minmax(0, 1fr); }
-  .svc-row, .svc-row:nth-child(even) { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .svc-row:nth-child(even) .arch { order: 0; }
-  .svc-row .arch { width: min(100%, 340px); }
-  .unsure .btn { width: 100%; }
-  .carousel { --h: clamp(320px, 56vh, 440px); }
-  .slide.land { height: auto; width: min(520px, calc(100vw - 56px)); }
-  .slide.land img { width: 100%; height: auto; }
-  .top .wrap { position: relative; flex-wrap: wrap; }
-  .nav { order: 2; flex: 1 0 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px 20px; }
-  .js .top .wrap { flex-wrap: nowrap; }
-  .js .nav-toggle { display: inline-flex; }
-  .js .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 21; flex-direction: column; align-items: stretch; gap: 4px; padding: 12px 20px 20px; background: var(--ground); box-shadow: 0 12px 20px rgb(42 26 20 / 10%); }
-  .js .nav.open { display: flex; }
-  .js .nav a:not(.btn) { display: block; padding: 12px 0; }
-  .js .nav .btn { width: 100%; margin-top: 4px; }
-  .foot { flex-direction: column; align-items: flex-start; }
-  .foot-info { justify-items: start; text-align: left; }
-}
-@media (max-width: 640px) {
-  .principles .wrap { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 44px; }
-  .principles p { max-width: none; }
-}
-@media (max-width: 480px) {
-  .fab { width: 56px; height: 56px; padding: 0; justify-content: center; }
-  .fab span { display: none; }
-}
-@media (max-width: 420px) {
-  .brand small { display: none; }
-  .btns .btn { width: 100%; }
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      line-height: 1.1;
+      min-width: 0;
+    }
 
-/* ---------- movimento (um momento autoral na abertura; o resto é resposta) ---------- */
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-  @keyframes unveil { from { opacity: 0; clip-path: inset(14% 0 0 0 round 999px 999px 22px 22px); } to { opacity: 1; clip-path: inset(0 0 0 0 round 999px 999px 22px 22px); } }
+    .brand img {
+      display: block;
+      height: 38px;
+      width: auto;
+    }
 
-  .hero h1, .hero .lead, .hero .btns, .hero .fine { animation: rise 560ms var(--ease-out) both; }
-  .hero .lead { animation-delay: 70ms; }
-  .hero .btns { animation-delay: 140ms; }
-  .hero .fine { animation-delay: 200ms; }
-  .hero-photo { animation: unveil 900ms var(--ease-in-out) 80ms both; }
+    .brand b {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.6rem;
+      letter-spacing: 0.005em;
+    }
 
-  /* revelação ao rolar: começa visível o suficiente, sai de baixo, rápido */
-  .reveal { transition: opacity 520ms var(--ease-out) var(--d, 0ms), transform 520ms var(--ease-out) var(--d, 0ms); }
-  .reveal:not(.is-in) { opacity: 0; transform: translateY(18px); }
+    .brand small {
+      display: block;
+      font-size: var(--t-small);
+      color: var(--muted);
+      margin-top: 2px;
+    }
 
-  /* diagrama se desenha quando entra na tela */
-  .js .diagram .g-brow { stroke-dasharray: 1; stroke-dashoffset: 0; }
-  .js .diagram:not(.seen) .g-brow { stroke-dashoffset: 1; }
-  .js .diagram .g-brow { transition: stroke-dashoffset 1.3s var(--ease-in-out) 0.2s; }
-  .js .diagram .g-dot, .js .diagram .g-txt, .js .diagram .g-dash { transition: opacity 400ms var(--ease-out) var(--t, 0ms), scale 400ms var(--ease-out) var(--t, 0ms); transform-box: fill-box; transform-origin: center; }
-  .js .diagram:not(.seen) .g-dot { opacity: 0; scale: 0.6; }
-  .js .diagram:not(.seen) .g-txt, .js .diagram:not(.seen) .g-dash { opacity: 0; }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: var(--t-small);
+    }
 
-  .slide { scale: calc(0.96 + 0.04 * var(--a, 1)); }
-  .slide img { transition: scale 600ms var(--ease-out); }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .hero-photo img { scale: 1; }
-}
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .slide:hover img { scale: 1.03; }
-}
-</style>
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid var(--soft);
+      border-radius: 50%;
+      background: var(--ground);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .nav-toggle svg {
+      display: block;
+      width: 21px;
+      height: 21px;
+    }
+
+    .nav a:not(.btn) {
+      color: var(--muted);
+      text-decoration: none;
+      padding-block: 10px;
+      position: relative;
+      transition: color 160ms var(--ease-out);
+    }
+
+    .nav a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 6px;
+      height: 2px;
+      background: var(--rose);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 240ms var(--ease-out);
+    }
+
+    .progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: var(--rose);
+      transform-origin: left;
+      transform: scaleX(var(--p, 0));
+      pointer-events: none;
+    }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 30px;
+      min-height: 48px;
+      border: 0;
+      border-radius: 999px;
+      font: 600 var(--t-small)/1.2 var(--font-body);
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn.primary {
+      background: var(--rose);
+      color: #fff;
+    }
+
+    .btn.ghost {
+      background: var(--soft);
+      color: var(--rose-deep);
+    }
+
+    .btn.gold {
+      background: var(--gold);
+      color: var(--cocoa);
+    }
+
+    .nav .btn {
+      padding: 10px 22px;
+      min-height: 44px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .nav a:not(.btn):hover {
+        color: var(--ink);
+      }
+
+      .nav a:not(.btn):hover::after {
+        transform: scaleX(1);
+      }
+
+      .btn.primary:hover {
+        background: var(--rose-deep);
+      }
+
+      .btn.ghost:hover {
+        background: #dfd2ca;
+      }
+
+      .btn.gold:hover {
+        background: #f3e1b6;
+      }
+    }
+
+    /* ---------- arco: a moldura do site ecoa o arco da sobrancelha ---------- */
+    .arch {
+      margin: 0;
+      aspect-ratio: 4 / 5;
+      border-radius: 999px 999px 22px 22px;
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .arch img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: clamp(32px, 6vw, 88px);
+      align-items: center;
+      padding-block: clamp(28px, 5vw, 64px) clamp(48px, 7vw, 96px);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--t-display);
+      line-height: 1.02;
+      letter-spacing: -0.015em;
+      margin: 0 0 24px;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 31em;
+      margin: 0 0 32px;
+      font-size: var(--t-lead);
+      color: var(--muted);
+    }
+
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .fine {
+      margin: 22px 0 0;
+      font-size: var(--t-small);
+      color: var(--muted);
+    }
+
+    .num {
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .hero-photo {
+      width: min(100%, 470px);
+      justify-self: end;
+    }
+
+    .hero-photo img {
+      scale: 1.06;
+      transform-origin: 50% 40%;
+    }
+
+    /* ---------- faixa de princípios (campo cacau) ---------- */
+    .cocoa {
+      background: var(--cocoa);
+      color: var(--on-cocoa);
+    }
+
+    .principles .wrap {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(24px, 5vw, 72px);
+      padding-block: 56px;
+    }
+
+    .principles h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--t-h3);
+      line-height: 1.1;
+      margin: 0 0 10px;
+      color: var(--gold);
+    }
+
+    .principles p {
+      margin: 0;
+      color: var(--on-cocoa-muted);
+      font-size: var(--t-body);
+      max-width: 24em;
+    }
+
+    /* ---------- seções ---------- */
+    section {
+      padding-block: clamp(64px, 9vw, 120px);
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--t-h2);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 18px;
+      text-wrap: balance;
+    }
+
+    h3 {
+      text-wrap: balance;
+    }
+
+    .sec-lead {
+      max-width: 36em;
+      color: var(--muted);
+      margin: 0 0 clamp(32px, 5vw, 56px);
+      font-size: var(--t-lead);
+    }
+
+    .alt {
+      background: var(--surface);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(32px, 6vw, 88px);
+      align-items: center;
+    }
+
+    .about p {
+      margin: 0 0 16px;
+      max-width: 34em;
+      color: var(--muted);
+      font-size: var(--t-lead);
+    }
+
+    .about p:last-child {
+      margin: 0;
+    }
+
+    .about-photo {
+      margin: 0;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .about-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 45%;
+    }
+
+    /* ---------- método ---------- */
+    .method {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(32px, 7vw, 104px);
+      align-items: start;
+    }
+
+    .method-side {
+      position: sticky;
+      top: 110px;
+    }
+
+    .diagram {
+      margin: 8px 0 0;
+      max-width: 440px;
+    }
+
+    .diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .diagram figcaption {
+      font-size: var(--t-small);
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .g-line {
+      stroke: var(--guide);
+      stroke-width: 1.4;
+      fill: none;
+    }
+
+    .g-dash {
+      stroke: var(--guide);
+      stroke-width: 1.4;
+      stroke-dasharray: 4 6;
+      fill: none;
+    }
+
+    .g-brow {
+      stroke: var(--rose);
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .g-dot {
+      fill: var(--surface);
+      stroke: var(--ink);
+      stroke-width: 2.4;
+    }
+
+    .g-txt {
+      fill: var(--muted);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 34px;
+      counter-reset: s;
+    }
+
+    .steps li {
+      counter-increment: s;
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 8px 20px;
+      align-items: start;
+    }
+
+    .steps li::before {
+      content: counter(s);
+      font-family: var(--font-display);
+      font-size: var(--t-h2);
+      line-height: 0.9;
+      color: var(--rose);
+      grid-row: 1 / span 2;
+      font-variant-numeric: lining-nums;
+    }
+
+    .steps h3 {
+      margin: 0;
+      font-size: var(--t-lead);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .steps p {
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--t-body);
+      max-width: 32em;
+    }
+
+    /* ---------- serviços ---------- */
+    .svc {
+      display: grid;
+      gap: clamp(64px, 9vw, 120px);
+    }
+
+    .svc-row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(32px, 7vw, 104px);
+      align-items: center;
+    }
+
+    .svc-row .arch {
+      width: min(100%, 400px);
+      justify-self: center;
+    }
+
+    .svc-row:nth-child(even) {
+      grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
+    }
+
+    .svc-row:nth-child(even) .arch {
+      order: 2;
+    }
+
+    .svc h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--t-h3);
+      line-height: 1.08;
+      margin: 0 0 14px;
+    }
+
+    .svc .pitch {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: var(--t-lead);
+      max-width: 34em;
+    }
+
+    .svc .pitch strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .svc h4 {
+      margin: 0 0 12px;
+      font-size: var(--t-small);
+      font-weight: 600;
+      color: var(--rose-deep);
+    }
+
+    .checks {
+      margin: 0 0 26px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      max-width: 34em;
+    }
+
+    .checks li {
+      padding-left: 30px;
+      position: relative;
+      font-size: var(--t-body);
+    }
+
+    .checks li::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0.4em;
+      width: 6px;
+      height: 12px;
+      border: solid var(--rose);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 30px;
+    }
+
+    .chips span {
+      background: var(--soft);
+      border-radius: 999px;
+      padding: 7px 15px;
+      font-size: var(--t-small);
+    }
+
+    .assure {
+      list-style: none;
+      margin: 44px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 44px;
+      color: var(--muted);
+      font-size: var(--t-body);
+    }
+
+    .assure li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .assure li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--guide);
+    }
+
+    .unsure {
+      margin-top: 40px;
+      background: var(--soft);
+      border-radius: 28px;
+      padding: clamp(28px, 4vw, 44px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .unsure h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--t-h3);
+      line-height: 1.1;
+      margin: 0 0 6px;
+    }
+
+    .unsure p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 32em;
+    }
+
+    .unsure .btn {
+      background: var(--ground);
+      color: var(--rose-deep);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .unsure .btn:hover {
+        background: #fff;
+      }
+    }
+
+    /* ---------- trabalhos ---------- */
+    .carousel {
+      --h: clamp(400px, 64vh, 560px);
+    }
+
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      overscroll-behavior-x: contain;
+      cursor: grab;
+      border-radius: 16px;
+    }
+
+    .track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .track.drag {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+      cursor: grabbing;
+      user-select: none;
+    }
+
+    .slide {
+      flex: 0 0 auto;
+      height: var(--h);
+      margin: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      background: var(--soft);
+      opacity: calc(0.55 + 0.45 * var(--a, 1));
+    }
+
+    .slide img {
+      display: block;
+      height: 100%;
+      width: auto;
+      max-width: none;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    .car-ctl {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .car-count {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .car-count b {
+      font-weight: 400;
+      color: var(--rose);
+    }
+
+    .car-bar {
+      flex: 1;
+      height: 4px;
+      background: var(--soft);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .car-bar span {
+      display: block;
+      height: 100%;
+      background: var(--rose);
+      border-radius: 4px;
+      transform-origin: left;
+      transform: scaleX(0.2);
+      transition: transform 200ms var(--ease-out);
+    }
+
+    .car-btns {
+      display: flex;
+      gap: 10px;
+    }
+
+    .car-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--soft);
+      color: var(--rose-deep);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      padding: 0;
+      transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out), opacity 160ms var(--ease-out);
+    }
+
+    .car-btn:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+
+    .car-btn:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .car-btn:hover:not(:disabled) {
+        background: var(--rose);
+        color: #fff;
+      }
+    }
+
+    .more {
+      margin: 28px 0 0;
+    }
+
+    .more a {
+      color: var(--rose-deep);
+      font-weight: 600;
+    }
+
+    /* ---------- dúvidas ---------- */
+    .faq-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(32px, 7vw, 104px);
+      align-items: start;
+    }
+
+    .faq-intro {
+      position: sticky;
+      top: 110px;
+    }
+
+    .faq-intro .sec-lead {
+      margin-bottom: 28px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--surface);
+      border-radius: 18px;
+      transition: background-color 200ms var(--ease-out);
+    }
+
+    details[open] {
+      background: var(--soft);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 20px 56px 20px 24px;
+      min-height: 60px;
+      font-weight: 600;
+      font-size: var(--t-body);
+      position: relative;
+      border-radius: 18px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--rose);
+      transform: translateY(-50%);
+      transition: transform 220ms var(--ease-out);
+    }
+
+    details[open] summary::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 24px 22px;
+      color: var(--muted);
+      max-width: 40em;
+    }
+
+    details::details-content {
+      block-size: 0;
+      overflow: clip;
+      transition: block-size 260ms var(--ease-out), content-visibility 260ms var(--ease-out) allow-discrete;
+    }
+
+    details[open]::details-content {
+      block-size: auto;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      details:not([open]):hover {
+        background: var(--soft);
+      }
+    }
+
+    /* ---------- contato ---------- */
+    .cta-sec {
+      padding-block: clamp(72px, 10vw, 136px);
+    }
+
+    .cta {
+      display: grid;
+      gap: 22px;
+      justify-items: start;
+    }
+
+    .cta h2 {
+      color: var(--on-cocoa);
+      max-width: 14em;
+      margin: 0;
+      font-size: var(--t-display);
+    }
+
+    .cta p {
+      margin: 0;
+      color: var(--on-cocoa-muted);
+      max-width: 32em;
+      font-size: var(--t-lead);
+    }
+
+    .cta .num {
+      color: var(--gold);
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 12px 24px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .cta-actions a:not(.btn) {
+      color: var(--on-cocoa);
+      font-weight: 600;
+    }
+
+    /* ---------- rodapé ---------- */
+    footer {
+      background: var(--ground);
+    }
+
+    .foot {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding-block: 56px 40px;
+    }
+
+    .foot img {
+      display: block;
+      width: 260px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .foot-info {
+      color: var(--muted);
+      font-size: var(--t-small);
+      display: grid;
+      gap: 6px;
+      justify-items: end;
+      text-align: right;
+    }
+
+    .foot-info a {
+      color: var(--rose-deep);
+      font-weight: 600;
+    }
+
+    .fab {
+      position: fixed;
+      right: max(16px, env(safe-area-inset-right, 0px));
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 25;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      background: var(--rose);
+      color: #fff;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1;
+      transition: background-color 160ms var(--ease-out), transform 160ms var(--ease-out), opacity 200ms var(--ease-out), visibility 200ms;
+    }
+
+    .fab.away {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .fab:active {
+      transform: scale(0.97);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .fab:hover {
+        background: var(--rose-deep);
+      }
+    }
+
+    /* ---------- responsivo ---------- */
+    @media (max-width: 1000px) {
+
+      .method,
+      .faq-wrap {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .method-side,
+      .faq-intro {
+        position: static;
+      }
+
+      .diagram {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+        padding-block: 20px 56px;
+      }
+
+      .hero-photo {
+        justify-self: center;
+        width: min(100%, 360px);
+      }
+
+      .about {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .svc-row,
+      .svc-row:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .svc-row:nth-child(even) .arch {
+        order: 0;
+      }
+
+      .svc-row .arch {
+        width: min(100%, 340px);
+      }
+
+      .unsure .btn {
+        width: 100%;
+      }
+
+      .carousel {
+        --h: clamp(320px, 56vh, 440px);
+      }
+
+      .slide.land {
+        height: auto;
+        width: min(520px, calc(100vw - 56px));
+      }
+
+      .slide.land img {
+        width: 100%;
+        height: auto;
+      }
+
+      .top .wrap {
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+      .nav {
+        order: 2;
+        flex: 1 0 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+      }
+
+      .js .top .wrap {
+        flex-wrap: nowrap;
+      }
+
+      .js .nav-toggle {
+        display: inline-flex;
+      }
+
+      .js .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 21;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 12px 20px 20px;
+        background: var(--ground);
+        box-shadow: 0 12px 20px rgb(42 26 20 / 10%);
+      }
+
+      .js .nav.open {
+        display: flex;
+      }
+
+      .js .nav a:not(.btn) {
+        display: block;
+        padding: 12px 0;
+      }
+
+      .js .nav .btn {
+        width: 100%;
+        margin-top: 4px;
+      }
+
+      .foot {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .foot-info {
+        justify-items: start;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .principles .wrap {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding-block: 44px;
+      }
+
+      .principles p {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fab {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .fab span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand small {
+        display: none;
+      }
+
+      .btns .btn {
+        width: 100%;
+      }
+    }
+
+    /* ---------- movimento (um momento autoral na abertura; o resto é resposta) ---------- */
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @keyframes unveil {
+        from {
+          opacity: 0;
+          clip-path: inset(14% 0 0 0 round 999px 999px 22px 22px);
+        }
+
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0 round 999px 999px 22px 22px);
+        }
+      }
+
+      .hero h1,
+      .hero .lead,
+      .hero .btns,
+      .hero .fine {
+        animation: rise 560ms var(--ease-out) both;
+      }
+
+      .hero .lead {
+        animation-delay: 70ms;
+      }
+
+      .hero .btns {
+        animation-delay: 140ms;
+      }
+
+      .hero .fine {
+        animation-delay: 200ms;
+      }
+
+      .hero-photo {
+        animation: unveil 900ms var(--ease-in-out) 80ms both;
+      }
+
+      /* revelação ao rolar: começa visível o suficiente, sai de baixo, rápido */
+      .reveal {
+        transition: opacity 520ms var(--ease-out) var(--d, 0ms), transform 520ms var(--ease-out) var(--d, 0ms);
+      }
+
+      .reveal:not(.is-in) {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      /* diagrama se desenha quando entra na tela */
+      .js .diagram .g-brow {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 0;
+      }
+
+      .js .diagram:not(.seen) .g-brow {
+        stroke-dashoffset: 1;
+      }
+
+      .js .diagram .g-brow {
+        transition: stroke-dashoffset 1.3s var(--ease-in-out) 0.2s;
+      }
+
+      .js .diagram .g-dot,
+      .js .diagram .g-txt,
+      .js .diagram .g-dash {
+        transition: opacity 400ms var(--ease-out) var(--t, 0ms), scale 400ms var(--ease-out) var(--t, 0ms);
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .js .diagram:not(.seen) .g-dot {
+        opacity: 0;
+        scale: 0.6;
+      }
+
+      .js .diagram:not(.seen) .g-txt,
+      .js .diagram:not(.seen) .g-dash {
+        opacity: 0;
+      }
+
+      .slide {
+        scale: calc(0.96 + 0.04 * var(--a, 1));
+      }
+
+      .slide img {
+        transition: scale 600ms var(--ease-out);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .hero-photo img {
+        scale: 1;
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      .slide:hover img {
+        scale: 1.03;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="top">
-  <div class="progress" aria-hidden="true"></div>
-  <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Moany Rocha, início"><img src="img/logo-monograma.png" alt="" width="220" height="147"><span><b>Moany Rocha</b><small>Designer de sobrancelhas</small></span></a>
-    <button class="nav-toggle" type="button" aria-label="Menu de navegação" aria-controls="site-nav" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <nav class="nav" id="site-nav" aria-label="Seções">
-      <a href="#metodo">Método</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#trabalhos">Trabalhos</a>
-      <a href="#duvidas">Dúvidas</a>
-      <a class="btn primary" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
-    </nav>
-  </div>
-</header>
-
-<main id="conteudo">
-  <div class="wrap" id="inicio">
-    <div class="hero">
-      <div>
-        <h1>Sobrancelhas que respeitam o seu rosto</h1>
-        <p class="lead">Cada rosto tem proporções próprias. Meu trabalho é desenhar a sobrancelha que combina com as suas, com técnica, planejamento e resultado natural.</p>
-        <div class="btns">
-          <a class="btn primary" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar pelo WhatsApp</a>
-          <a class="btn ghost" href="#trabalhos">Ver trabalhos</a>
-        </div>
-        <p class="fine">Micropigmentadora e designer de sobrancelhas</p>
-      </div>
-      <figure class="arch hero-photo"><img src="img/trabalho-2.jpg" alt="Cliente de cabelo ruivo com sobrancelhas feitas por Moany Rocha" width="720" height="1280" fetchpriority="high" decoding="async"></figure>
-    </div>
-  </div>
-
-  <div class="principles cocoa">
+  <header class="top">
+    <div class="progress" aria-hidden="true"></div>
     <div class="wrap">
-      <div><h3>Desenho sob medida</h3><p>O formato é definido pelas proporções do seu rosto, não por um modelo pronto.</p></div>
-      <div><h3>Pigmento para o seu tom</h3><p>A cor é escolhida de acordo com o seu tom de pele e o cabelo, para um efeito natural.</p></div>
-      <div><h3>Você aprova antes</h3><p>O desenho é feito e validado com você antes de qualquer procedimento.</p></div>
+      <a class="brand" href="#inicio" aria-label="Moany Rocha, início"><img src="img/logo-monograma.png" alt=""
+          width="220" height="147"><span><b>Moany Rocha</b><small>Designer de sobrancelhas</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Menu de navegação" aria-controls="site-nav"
+        aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Seções">
+        <a href="#metodo">Método</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a class="btn primary"
+          href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <section id="sobre">
-    <div class="wrap about">
-      <div class="about-copy">
-        <h2>Técnica, olhar e cuidado em cada atendimento</h2>
-        <p>Sou Moany Rocha e trabalho com design de sobrancelhas pela técnica de epilação egípcia, brow lamination e micropigmentação na técnica Shadow. A sobrancelha emoldura o olhar e muda a expressão do rosto inteiro, por isso cada trabalho parte de um planejamento.</p>
-        <p>Meu objetivo é que o resultado pareça seu: harmonioso, simétrico dentro do possível e com a naturalidade que você espera.</p>
-      </div>
-      <figure class="about-photo"><img src="img/trabalho-6.jpg" alt="Resultado de design de sobrancelhas feito por Moany Rocha" width="1100" height="825" loading="lazy" decoding="async"></figure>
-    </div>
-  </section>
-
-  <section id="metodo" class="alt">
-    <div class="wrap method">
-      <div class="method-side">
-        <h2>Como é o atendimento</h2>
-        <p class="sec-lead">Um passo a passo que garante segurança e um resultado alinhado com o que você deseja.</p>
-        <figure class="diagram">
-          <svg viewBox="0 0 400 290" role="img" aria-label="Diagrama do mapeamento da sobrancelha em três pontos: início, arco e fim">
-            <line class="g-line" x1="30" y1="232" x2="370" y2="232"/>
-            <line class="g-dash" x1="78" y1="46" x2="78" y2="232" style="--t:200ms"/>
-            <line class="g-dash" x1="212" y1="46" x2="212" y2="232" style="--t:300ms"/>
-            <line class="g-dash" x1="332" y1="46" x2="332" y2="232" style="--t:400ms"/>
-            <path class="g-line" d="M78 232 L332 120"/>
-            <path class="g-brow" pathLength="1" d="M78 168 C120 124 170 98 212 98 C262 98 304 128 332 154"/>
-            <circle class="g-dot" cx="78" cy="168" r="7" style="--t:500ms"/>
-            <circle class="g-dot" cx="212" cy="98" r="7" style="--t:900ms"/>
-            <circle class="g-dot" cx="332" cy="154" r="7" style="--t:1300ms"/>
-            <text class="g-txt" x="78" y="264" text-anchor="middle" style="--t:500ms">Início</text>
-            <text class="g-txt" x="212" y="264" text-anchor="middle" style="--t:900ms">Arco</text>
-            <text class="g-txt" x="332" y="264" text-anchor="middle" style="--t:1300ms">Fim</text>
-          </svg>
-          <figcaption>Mapeamento em três pontos</figcaption>
-        </figure>
-      </div>
-      <ol class="steps">
-        <li><h3>Avaliação</h3><p>Conversamos sobre o que você quer e avaliamos a sua pele e o histórico das sobrancelhas.</p></li>
-        <li><h3>Mapeamento</h3><p>Marcamos início, arco e fim de acordo com as proporções do seu rosto.</p></li>
-        <li><h3>Desenho</h3><p>O desenho é feito e ajustado até você aprovar.</p></li>
-        <li><h3>Procedimento</h3><p>Realizado com materiais descartáveis e cuidados de biossegurança.</p></li>
-        <li><h3>Orientações</h3><p>Você recebe os cuidados para a cicatrização e para o resultado durar mais.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="servicos">
-    <div class="wrap">
-      <h2>Escolha o cuidado ideal para o seu olhar</h2>
-      <p class="sec-lead">Em todos os serviços, o desenho nasce do mapeamento do seu rosto. Na avaliação, eu indico o que faz mais sentido para você.</p>
-      <div class="svc">
-        <article class="svc-row">
-          <figure class="arch"><img src="img/trabalho-7.jpg" alt="Sobrancelhas com micropigmentação Shadow, efeito sombreado e natural" width="800" height="1421" loading="lazy" decoding="async"></figure>
-          <div class="svc-body">
-            <h3>Micropigmentação de sobrancelhas</h3>
-            <p class="pitch"><strong>Técnica Shadow.</strong> Micropigmentação com efeito sombreado e esfumado, que preenche e define a sobrancelha com a suavidade de uma maquiagem.</p>
-            <h4>O que você ganha</h4>
-            <ul class="checks">
-              <li>Efeito sombreado e esfumado, com aparência de maquiagem suave</li>
-              <li>Falhas preenchidas com acabamento natural</li>
-              <li>Formato e pigmento escolhidos para o seu rosto e o seu tom de pele</li>
-              <li>Mais praticidade na sua rotina</li>
-            </ul>
-            <h4>Ideal para quem tem</h4>
-            <div class="chips"><span>Falhas</span><span>Sobrancelhas ralas</span><span>Assimetria</span><span>Pouco tempo para se maquiar</span></div>
-            <a class="btn primary" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero agendar</a>
-          </div>
-        </article>
-
-        <article class="svc-row">
-          <figure class="arch"><img src="img/trabalho-3.jpg" alt="Sobrancelhas desenhadas com epilação egípcia, contorno preciso e limpo" width="1100" height="619" loading="lazy" decoding="async" style="object-position: 64% 50%"></figure>
-          <div class="svc-body">
-            <h3>Design de sobrancelhas</h3>
-            <p class="pitch">Desenho feito com a técnica de epilação egípcia, que remove os pelos com linha e deixa o contorno preciso e limpo.</p>
-            <h4>O que você ganha</h4>
-            <ul class="checks">
-              <li>Epilação com linha, para um contorno preciso</li>
-              <li>Desenho personalizado pelo mapeamento facial</li>
-              <li>Acabamento limpo e simétrico</li>
-              <li>Aspecto natural, sem exageros</li>
-            </ul>
-            <h4>Ideal para quem</h4>
-            <div class="chips"><span>Tem fios suficientes</span><span>Prefere o natural</span><span>Quer manter o formato</span><span>Busca mais harmonia</span></div>
-            <a class="btn primary" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero agendar</a>
-          </div>
-        </article>
-
-        <article class="svc-row">
-          <figure class="arch"><img src="img/trabalho-5.jpg" alt="Sobrancelhas com brow lamination, fios alinhados e volume" width="800" height="1421" loading="lazy" decoding="async"></figure>
-          <div class="svc-body">
-            <h3>Brow Lamination</h3>
-            <p class="pitch">Fios alinhados e fixos na direção certa, com o efeito de uma sobrancelha cheia e penteada.</p>
-            <h4>O que você ganha</h4>
-            <ul class="checks">
-              <li>Fios alinhados na direção desejada</li>
-              <li>Mais volume e aspecto de sobrancelha preenchida</li>
-              <li>Resultado natural, sem pigmento</li>
-              <li>Combina com o design e o mapeamento do rosto</li>
-            </ul>
-            <h4>Ideal para quem</h4>
-            <div class="chips"><span>Tem fios rebeldes</span><span>Quer sobrancelha penteada</span><span>Busca mais volume</span><span>Prefere o natural</span></div>
-            <a class="btn primary" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero agendar</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="unsure">
+  <main id="conteudo">
+    <div class="wrap" id="inicio">
+      <div class="hero">
         <div>
-          <h3>Em dúvida sobre qual escolher?</h3>
-          <p>Me mande uma mensagem no WhatsApp. Eu avalio o seu caso e indico a melhor opção para você.</p>
+          <h1>Sobrancelhas que respeitam o seu rosto</h1>
+          <p class="lead">Cada rosto tem proporções próprias. Meu trabalho é desenhar a sobrancelha que combina com as
+            suas, com técnica, planejamento e resultado natural.</p>
+          <div class="btns">
+            <a class="btn primary"
+              href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar
+              pelo WhatsApp</a>
+            <a class="btn ghost" href="#trabalhos">Ver trabalhos</a>
+          </div>
+          <p class="fine">Micropigmentadora e designer de sobrancelhas</p>
         </div>
-        <a class="btn ghost" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20qual%20servi%C3%A7o%20escolher.">Falar comigo no WhatsApp</a>
+        <figure class="arch hero-photo"><img src="img/trabalho-2.jpg"
+            alt="Cliente de cabelo ruivo com sobrancelhas feitas por Moany Rocha" width="720" height="1280"
+            fetchpriority="high" decoding="async"></figure>
       </div>
-
-      <ul class="assure">
-        <li>Avaliação personalizada</li>
-        <li>Desenho aprovado por você antes de começar</li>
-        <li>Materiais descartáveis e biossegurança</li>
-      </ul>
     </div>
-  </section>
 
-  <section id="trabalhos" class="alt">
-    <div class="wrap">
-      <h2>Trabalhos</h2>
-      <p class="sec-lead">Resultados reais dos atendimentos de micropigmentação e design de sobrancelhas.</p>
-      <div class="carousel">
-        <div class="track" id="track" tabindex="0" role="region" aria-label="Fotos dos trabalhos">
-          <figure class="slide"><img src="img/trabalho-1.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="720" height="1280" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide land"><img src="img/trabalho-3.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="1100" height="619" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide"><img src="img/trabalho-5.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide"><img src="img/trabalho-2.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="720" height="1280" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide land"><img src="img/trabalho-6.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="1100" height="825" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide"><img src="img/trabalho-4.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
-          <figure class="slide"><img src="img/trabalho-7.jpg" alt="Resultado de sobrancelha feita por Moany Rocha" width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
+    <div class="principles cocoa">
+      <div class="wrap">
+        <div>
+          <h3>Desenho sob medida</h3>
+          <p>O formato é definido pelas proporções do seu rosto, não por um modelo pronto.</p>
         </div>
-        <div class="car-ctl">
-          <span class="car-count" aria-hidden="true"><b id="cnt">1</b> / <span id="tot">7</span></span>
-          <div class="car-bar" aria-hidden="true"><span></span></div>
-          <div class="car-btns">
-            <button class="car-btn" id="prev" type="button" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-            <button class="car-btn" id="next" type="button" aria-label="Próximas fotos"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div>
+          <h3>Pigmento para o seu tom</h3>
+          <p>A cor é escolhida de acordo com o seu tom de pele e o cabelo, para um efeito natural.</p>
+        </div>
+        <div>
+          <h3>Você aprova antes</h3>
+          <p>O desenho é feito e validado com você antes de qualquer procedimento.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="sobre">
+      <div class="wrap about">
+        <div class="about-copy">
+          <h2>Técnica, olhar e cuidado em cada atendimento</h2>
+          <p>Sou Moany Rocha e trabalho com design de sobrancelhas pela técnica de epilação egípcia, brow lamination e
+            micropigmentação na técnica Shadow. A sobrancelha emoldura o olhar e muda a expressão do rosto inteiro, por
+            isso cada trabalho parte de um planejamento.</p>
+          <p>Meu objetivo é que o resultado pareça seu: harmonioso, simétrico dentro do possível e com a naturalidade
+            que você espera.</p>
+        </div>
+        <figure class="about-photo"><img src="img/trabalho-6.jpg"
+            alt="Resultado de design de sobrancelhas feito por Moany Rocha" width="1100" height="825" loading="lazy"
+            decoding="async"></figure>
+      </div>
+    </section>
+
+    <section id="metodo" class="alt">
+      <div class="wrap method">
+        <div class="method-side">
+          <h2>Como é o atendimento</h2>
+          <p class="sec-lead">Um passo a passo que garante segurança e um resultado alinhado com o que você deseja.</p>
+          <figure class="diagram">
+            <svg viewBox="0 0 400 290" role="img"
+              aria-label="Diagrama do mapeamento da sobrancelha em três pontos: início, arco e fim">
+              <line class="g-line" x1="30" y1="232" x2="370" y2="232" />
+              <line class="g-dash" x1="78" y1="46" x2="78" y2="232" style="--t:200ms" />
+              <line class="g-dash" x1="212" y1="46" x2="212" y2="232" style="--t:300ms" />
+              <line class="g-dash" x1="332" y1="46" x2="332" y2="232" style="--t:400ms" />
+              <path class="g-line" d="M78 232 L332 120" />
+              <path class="g-brow" pathLength="1" d="M78 168 C120 124 170 98 212 98 C262 98 304 128 332 154" />
+              <circle class="g-dot" cx="78" cy="168" r="7" style="--t:500ms" />
+              <circle class="g-dot" cx="212" cy="98" r="7" style="--t:900ms" />
+              <circle class="g-dot" cx="332" cy="154" r="7" style="--t:1300ms" />
+              <text class="g-txt" x="78" y="264" text-anchor="middle" style="--t:500ms">Início</text>
+              <text class="g-txt" x="212" y="264" text-anchor="middle" style="--t:900ms">Arco</text>
+              <text class="g-txt" x="332" y="264" text-anchor="middle" style="--t:1300ms">Fim</text>
+            </svg>
+            <figcaption>Mapeamento em três pontos</figcaption>
+          </figure>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Avaliação</h3>
+            <p>Conversamos sobre o que você quer e avaliamos a sua pele e o histórico das sobrancelhas.</p>
+          </li>
+          <li>
+            <h3>Mapeamento</h3>
+            <p>Marcamos início, arco e fim de acordo com as proporções do seu rosto.</p>
+          </li>
+          <li>
+            <h3>Desenho</h3>
+            <p>O desenho é feito e ajustado até você aprovar.</p>
+          </li>
+          <li>
+            <h3>Procedimento</h3>
+            <p>Realizado com materiais descartáveis e cuidados de biossegurança.</p>
+          </li>
+          <li>
+            <h3>Orientações</h3>
+            <p>Você recebe os cuidados para a cicatrização e para o resultado durar mais.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="wrap">
+        <h2>Escolha o cuidado ideal para o seu olhar</h2>
+        <p class="sec-lead">Em todos os serviços, o desenho nasce do mapeamento do seu rosto. Na avaliação, eu indico o
+          que faz mais sentido para você.</p>
+        <div class="svc">
+          <article class="svc-row">
+            <figure class="arch"><img src="img/trabalho-7.jpg"
+                alt="Sobrancelhas com micropigmentação Shadow, efeito sombreado e natural" width="800" height="1421"
+                loading="lazy" decoding="async"></figure>
+            <div class="svc-body">
+              <h3>Micropigmentação de sobrancelhas</h3>
+              <p class="pitch"><strong>Técnica Shadow.</strong> Micropigmentação com efeito sombreado e esfumado, que
+                preenche e define a sobrancelha com a suavidade de uma maquiagem.</p>
+              <h4>O que você ganha</h4>
+              <ul class="checks">
+                <li>Efeito sombreado e esfumado, com aparência de maquiagem suave</li>
+                <li>Falhas preenchidas com acabamento natural</li>
+                <li>Formato e pigmento escolhidos para o seu rosto e o seu tom de pele</li>
+                <li>Mais praticidade na sua rotina</li>
+              </ul>
+              <h4>Ideal para quem tem</h4>
+              <div class="chips"><span>Falhas</span><span>Sobrancelhas ralas</span><span>Assimetria</span><span>Pouco
+                  tempo para se maquiar</span></div>
+              <a class="btn primary"
+                href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero
+                agendar</a>
+            </div>
+          </article>
+
+          <article class="svc-row">
+            <figure class="arch"><img src="img/trabalho-3.jpg"
+                alt="Sobrancelhas desenhadas com epilação egípcia, contorno preciso e limpo" width="1100" height="619"
+                loading="lazy" decoding="async" style="object-position: 64% 50%"></figure>
+            <div class="svc-body">
+              <h3>Design de sobrancelhas</h3>
+              <p class="pitch">Desenho feito com a técnica de epilação egípcia, que remove os pelos com linha e deixa o
+                contorno preciso e limpo.</p>
+              <h4>O que você ganha</h4>
+              <ul class="checks">
+                <li>Epilação com linha, para um contorno preciso</li>
+                <li>Desenho personalizado pelo mapeamento facial</li>
+                <li>Acabamento limpo e simétrico</li>
+                <li>Aspecto natural, sem exageros</li>
+              </ul>
+              <h4>Ideal para quem</h4>
+              <div class="chips"><span>Tem fios suficientes</span><span>Prefere o natural</span><span>Quer manter o
+                  formato</span><span>Busca mais harmonia</span></div>
+              <a class="btn primary"
+                href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero
+                agendar</a>
+            </div>
+          </article>
+
+          <article class="svc-row">
+            <figure class="arch"><img src="img/trabalho-5.jpg"
+                alt="Sobrancelhas com brow lamination, fios alinhados e volume" width="800" height="1421" loading="lazy"
+                decoding="async"></figure>
+            <div class="svc-body">
+              <h3>Brow Lamination</h3>
+              <p class="pitch">Fios alinhados e fixos na direção certa, com o efeito de uma sobrancelha cheia e
+                penteada.</p>
+              <h4>O que você ganha</h4>
+              <ul class="checks">
+                <li>Fios alinhados na direção desejada</li>
+                <li>Mais volume e aspecto de sobrancelha preenchida</li>
+                <li>Resultado natural, sem pigmento</li>
+                <li>Combina com o design e o mapeamento do rosto</li>
+              </ul>
+              <h4>Ideal para quem</h4>
+              <div class="chips"><span>Tem fios rebeldes</span><span>Quer sobrancelha penteada</span><span>Busca mais
+                  volume</span><span>Prefere o natural</span></div>
+              <a class="btn primary"
+                href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Quero
+                agendar</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="unsure">
+          <div>
+            <h3>Em dúvida sobre qual escolher?</h3>
+            <p>Me mande uma mensagem no WhatsApp. Eu avalio o seu caso e indico a melhor opção para você.</p>
+          </div>
+          <a class="btn ghost"
+            href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20qual%20servi%C3%A7o%20escolher.">Falar
+            comigo no WhatsApp</a>
+        </div>
+
+        <ul class="assure">
+          <li>Avaliação personalizada</li>
+          <li>Desenho aprovado por você antes de começar</li>
+          <li>Materiais descartáveis e biossegurança</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="trabalhos" class="alt">
+      <div class="wrap">
+        <h2>Trabalhos</h2>
+        <p class="sec-lead">Resultados reais dos atendimentos de micropigmentação e design de sobrancelhas.</p>
+        <div class="carousel">
+          <div class="track" id="track" tabindex="0" role="region" aria-label="Fotos dos trabalhos">
+            <figure class="slide"><img src="img/trabalho-1.jpg" alt="Resultado de sobrancelha feita por Moany Rocha"
+                width="720" height="1280" draggable="false" loading="lazy" decoding="async"></figure>
+            <figure class="slide land"><img src="img/trabalho-3.jpg"
+                alt="Resultado de sobrancelha feita por Moany Rocha" width="1100" height="619" draggable="false"
+                loading="lazy" decoding="async"></figure>
+            <figure class="slide"><img src="img/trabalho-5.jpg" alt="Resultado de sobrancelha feita por Moany Rocha"
+                width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
+            <figure class="slide"><img src="img/trabalho-2.jpg" alt="Resultado de sobrancelha feita por Moany Rocha"
+                width="720" height="1280" draggable="false" loading="lazy" decoding="async"></figure>
+            <figure class="slide land"><img src="img/trabalho-6.jpg"
+                alt="Resultado de sobrancelha feita por Moany Rocha" width="1100" height="825" draggable="false"
+                loading="lazy" decoding="async"></figure>
+            <figure class="slide"><img src="img/trabalho-4.jpg" alt="Resultado de sobrancelha feita por Moany Rocha"
+                width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
+            <figure class="slide"><img src="img/trabalho-7.jpg" alt="Resultado de sobrancelha feita por Moany Rocha"
+                width="800" height="1421" draggable="false" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="car-ctl">
+            <span class="car-count" aria-hidden="true"><b id="cnt">1</b> / <span id="tot">7</span></span>
+            <div class="car-bar" aria-hidden="true"><span></span></div>
+            <div class="car-btns">
+              <button class="car-btn" id="prev" type="button" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24"
+                  width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 5l-7 7 7 7" />
+                </svg></button>
+              <button class="car-btn" id="next" type="button" aria-label="Próximas fotos"><svg viewBox="0 0 24 24"
+                  width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 5l7 7-7 7" />
+                </svg></button>
+            </div>
           </div>
         </div>
+        <p class="more"><a href="https://www.instagram.com/moanyrocha_beauty/">Veja mais trabalhos no Instagram</a></p>
       </div>
-      <p class="more"><a href="https://www.instagram.com/moanyrocha_beauty/">Veja mais trabalhos no Instagram</a></p>
-    </div>
-  </section>
+    </section>
 
-  <section id="duvidas">
-    <div class="wrap faq-wrap">
-      <div class="faq-intro">
-        <h2>Dúvidas frequentes</h2>
-        <p class="sec-lead">As respostas abaixo são gerais. Na avaliação, tudo é explicado para o seu caso.</p>
-        <a class="btn ghost" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20tenho%20uma%20d%C3%BAvida.">Tirar dúvida no WhatsApp</a>
+    <section id="duvidas">
+      <div class="wrap faq-wrap">
+        <div class="faq-intro">
+          <h2>Dúvidas frequentes</h2>
+          <p class="sec-lead">As respostas abaixo são gerais. Na avaliação, tudo é explicado para o seu caso.</p>
+          <a class="btn ghost"
+            href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20tenho%20uma%20d%C3%BAvida.">Tirar
+            dúvida no WhatsApp</a>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>O que é a técnica Shadow?</summary>
+            <p>É uma técnica de micropigmentação que cria um efeito sombreado e esfumado, parecido com a sombra de uma
+              maquiagem, em vez de fios individuais desenhados.</p>
+          </details>
+          <details>
+            <summary>O que é a epilação egípcia?</summary>
+            <p>É uma técnica de remoção de pelos feita com linha. Ela permite contornar o desenho da sobrancelha com
+              precisão e deixar o acabamento limpo.</p>
+          </details>
+          <details>
+            <summary>O que é o brow lamination?</summary>
+            <p>É um tratamento que alinha os fios da sobrancelha e os mantém na direção desejada, deixando-a mais
+              preenchida e penteada, sem pigmento. O efeito é temporário e a duração varia de pessoa para pessoa.</p>
+          </details>
+          <details>
+            <summary>A micropigmentação dói?</summary>
+            <p>A sensação varia de pessoa para pessoa. Normalmente é usado anestésico tópico para deixar o procedimento
+              mais confortável.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo dura o resultado?</summary>
+            <p>A duração depende do tipo de pele, do pigmento, da exposição ao sol e dos cuidados depois. Por ser
+              semipermanente, o resultado desbota com o tempo e pede retoques periódicos.</p>
+          </details>
+          <details>
+            <summary>Como funciona a cicatrização?</summary>
+            <p>Nos primeiros dias a cor pode parecer mais intensa e depois suaviza. Seguir as orientações de cuidados é
+              essencial para um bom resultado, e eu explico tudo no atendimento.</p>
+          </details>
+          <details>
+            <summary>Qualquer pessoa pode fazer?</summary>
+            <p>Nem sempre. Gestantes, lactantes e pessoas com algumas condições de saúde ou de pele precisam de
+              avaliação antes. Por isso começamos sempre pela conversa.</p>
+          </details>
+          <details>
+            <summary>Como funciona o agendamento?</summary>
+            <p>Pelo WhatsApp. Clique em qualquer botão de agendar, mande uma mensagem e eu respondo com os horários
+              disponíveis.</p>
+          </details>
+        </div>
       </div>
-      <div class="faq-list">
-        <details>
-          <summary>O que é a técnica Shadow?</summary>
-          <p>É uma técnica de micropigmentação que cria um efeito sombreado e esfumado, parecido com a sombra de uma maquiagem, em vez de fios individuais desenhados.</p>
-        </details>
-        <details>
-          <summary>O que é a epilação egípcia?</summary>
-          <p>É uma técnica de remoção de pelos feita com linha. Ela permite contornar o desenho da sobrancelha com precisão e deixar o acabamento limpo.</p>
-        </details>
-        <details>
-          <summary>O que é o brow lamination?</summary>
-          <p>É um tratamento que alinha os fios da sobrancelha e os mantém na direção desejada, deixando-a mais preenchida e penteada, sem pigmento. O efeito é temporário e a duração varia de pessoa para pessoa.</p>
-        </details>
-        <details>
-          <summary>A micropigmentação dói?</summary>
-          <p>A sensação varia de pessoa para pessoa. Normalmente é usado anestésico tópico para deixar o procedimento mais confortável.</p>
-        </details>
-        <details>
-          <summary>Quanto tempo dura o resultado?</summary>
-          <p>A duração depende do tipo de pele, do pigmento, da exposição ao sol e dos cuidados depois. Por ser semipermanente, o resultado desbota com o tempo e pede retoques periódicos.</p>
-        </details>
-        <details>
-          <summary>Como funciona a cicatrização?</summary>
-          <p>Nos primeiros dias a cor pode parecer mais intensa e depois suaviza. Seguir as orientações de cuidados é essencial para um bom resultado, e eu explico tudo no atendimento.</p>
-        </details>
-        <details>
-          <summary>Qualquer pessoa pode fazer?</summary>
-          <p>Nem sempre. Gestantes, lactantes e pessoas com algumas condições de saúde ou de pele precisam de avaliação antes. Por isso começamos sempre pela conversa.</p>
-        </details>
-        <details>
-          <summary>Como funciona o agendamento?</summary>
-          <p>Pelo WhatsApp. Clique em qualquer botão de agendar, mande uma mensagem e eu respondo com os horários disponíveis.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contato" class="cocoa cta-sec">
-    <div class="wrap cta">
-      <h2>Vamos conversar sobre a sua sobrancelha?</h2>
-      <p>Chame no WhatsApp, conte o que você procura e combine o seu horário.</p>
-      <div class="cta-actions">
-        <a class="btn gold" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar pelo WhatsApp</a>
+    <section id="contato" class="cocoa cta-sec">
+      <div class="wrap cta">
+        <h2>Vamos conversar sobre a sua sobrancelha?</h2>
+        <p>Chame no WhatsApp, conte o que você procura e combine o seu horário.</p>
+        <div class="cta-actions">
+          <a class="btn gold"
+            href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar
+            pelo WhatsApp</a>
+          <a href="https://www.instagram.com/moanyrocha_beauty/">@moanyrocha_beauty</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="img/logo-completa.png" alt="Moany Rocha, designer de sobrancelhas e micropigmentação" width="900"
+        height="346" loading="lazy" decoding="async">
+      <div class="foot-info">
+        <span>Moany Rocha · Micropigmentação e design de sobrancelhas</span>
         <a href="https://www.instagram.com/moanyrocha_beauty/">@moanyrocha_beauty</a>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap foot">
-    <img src="img/logo-completa.png" alt="Moany Rocha, designer de sobrancelhas e micropigmentação" width="900" height="346" loading="lazy" decoding="async">
-    <div class="foot-info">
-      <span>Moany Rocha · Micropigmentação e design de sobrancelhas</span>
-      <a href="https://www.instagram.com/moanyrocha_beauty/">@moanyrocha_beauty</a>
-    </div>
-  </div>
-</footer>
+  <a class="fab"
+    href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+    aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" />
+      <path d="M9.2 8.6c.3 2.6 2.4 5 5.2 6l1.3-1.3-1.9-1-.8.7a4.6 4.6 0 0 1-2-2l.7-.8-1-1.9z" />
+    </svg>
+    <span>Agendar</span>
+  </a>
 
-<a class="fab" href="https://wa.me/5527988076090?text=Ol%C3%A1%2C%20Moany%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." aria-label="Agendar pelo WhatsApp">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.6c.3 2.6 2.4 5 5.2 6l1.3-1.3-1.9-1-.8.7a4.6 4.6 0 0 1-2-2l.7-.8-1-1.9z"/></svg>
-  <span>Agendar</span>
-</a>
+  <script>
+      (function () {
+        var top = document.querySelector(".top");
+        var bar = document.querySelector(".progress");
+        var heroImg = document.querySelector(".hero-photo img");
+        var nav = document.querySelector(".nav");
+        var navToggle = document.querySelector(".nav-toggle");
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var ticking = false;
 
-<script>
-(function () {
-  var top = document.querySelector(".top");
-  var bar = document.querySelector(".progress");
-  var heroImg = document.querySelector(".hero-photo img");
-  var nav = document.querySelector(".nav");
-  var navToggle = document.querySelector(".nav-toggle");
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var ticking = false;
+        function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
-  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+        if (nav && navToggle) {
+          var setNavOpen = function (open) {
+            nav.classList.toggle("open", open);
+            navToggle.setAttribute("aria-expanded", String(open));
+          };
+          navToggle.addEventListener("click", function () {
+            setNavOpen(navToggle.getAttribute("aria-expanded") !== "true");
+          });
+          nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () { setNavOpen(false); });
+          });
+          document.addEventListener("click", function (e) {
+            if (!nav.contains(e.target) && !navToggle.contains(e.target)) setNavOpen(false);
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+              setNavOpen(false);
+              navToggle.focus();
+            }
+          });
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 860) setNavOpen(false);
+          });
+        }
 
-  if (nav && navToggle) {
-    var setNavOpen = function (open) {
-      nav.classList.toggle("open", open);
-      navToggle.setAttribute("aria-expanded", String(open));
-    };
-    navToggle.addEventListener("click", function () {
-      setNavOpen(navToggle.getAttribute("aria-expanded") !== "true");
-    });
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () { setNavOpen(false); });
-    });
-    document.addEventListener("click", function (e) {
-      if (!nav.contains(e.target) && !navToggle.contains(e.target)) setNavOpen(false);
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
-        setNavOpen(false);
-        navToggle.focus();
-      }
-    });
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 860) setNavOpen(false);
-    });
-  }
+        function frame() {
+          ticking = false;
+          var y = window.scrollY || window.pageYOffset || 0;
+          var vh = window.innerHeight || document.documentElement.clientHeight;
+          var max = Math.max(1, document.documentElement.scrollHeight - vh);
+          top.classList.toggle("scrolled", y > 8);
+          bar.style.setProperty("--p", clamp(y / max, 0, 1).toFixed(4));
+          if (!reduce && heroImg) heroImg.style.translate = "0 " + (clamp(y, 0, 700) * 0.035).toFixed(1) + "px";
+        }
+        function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        frame();
 
-  function frame() {
-    ticking = false;
-    var y = window.scrollY || window.pageYOffset || 0;
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    var max = Math.max(1, document.documentElement.scrollHeight - vh);
-    top.classList.toggle("scrolled", y > 8);
-    bar.style.setProperty("--p", clamp(y / max, 0, 1).toFixed(4));
-    if (!reduce && heroImg) heroImg.style.translate = "0 " + (clamp(y, 0, 700) * 0.035).toFixed(1) + "px";
-  }
-  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  frame();
+        /* carrossel */
+        var track = document.getElementById("track");
+        if (track) {
+          var prev = document.getElementById("prev"), next = document.getElementById("next");
+          var fill = document.querySelector(".car-bar span");
+          var slides = Array.prototype.slice.call(track.querySelectorAll(".slide"));
+          var cnt = document.getElementById("cnt");
+          document.getElementById("tot").textContent = slides.length;
+          var updCar = function () {
+            var max = track.scrollWidth - track.clientWidth;
+            var r = (track.scrollLeft + track.clientWidth) / Math.max(1, track.scrollWidth);
+            fill.style.transform = "scaleX(" + clamp(r, 0, 1).toFixed(3) + ")";
+            var tr = track.getBoundingClientRect(), last = 0;
+            slides.forEach(function (sl, i) {
+              var b = sl.getBoundingClientRect();
+              var vis = Math.max(0, Math.min(b.right, tr.right) - Math.max(b.left, tr.left));
+              var a = clamp(vis / Math.max(1, b.width), 0, 1);
+              sl.style.setProperty("--a", a.toFixed(3));
+              if (a > 0.6) last = i;
+            });
+            cnt.textContent = last + 1;
+            prev.disabled = track.scrollLeft <= 2;
+            next.disabled = track.scrollLeft >= max - 2;
+          };
+          var go = function (d) { track.scrollBy({ left: d * track.clientWidth * 0.85, behavior: reduce ? "auto" : "smooth" }); };
+          prev.addEventListener("click", function () { go(-1); });
+          next.addEventListener("click", function () { go(1); });
+          track.addEventListener("scroll", updCar, { passive: true });
+          window.addEventListener("resize", updCar);
+          track.querySelectorAll("img").forEach(function (im) { im.addEventListener("load", updCar); });
+          track.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+            if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+          });
+          updCar();
+          var down = false, sx = 0, sl0 = 0;
+          track.addEventListener("pointerdown", function (e) {
+            if (e.pointerType !== "mouse" || e.button !== 0) return;
+            down = true; sx = e.clientX; sl0 = track.scrollLeft; track.classList.add("drag");
+          });
+          window.addEventListener("pointermove", function (e) { if (down) track.scrollLeft = sl0 - (e.clientX - sx); });
+          window.addEventListener("pointerup", function () { if (!down) return; down = false; track.classList.remove("drag"); });
+        }
 
-  /* carrossel */
-  var track = document.getElementById("track");
-  if (track) {
-    var prev = document.getElementById("prev"), next = document.getElementById("next");
-    var fill = document.querySelector(".car-bar span");
-    var slides = Array.prototype.slice.call(track.querySelectorAll(".slide"));
-    var cnt = document.getElementById("cnt");
-        document.getElementById("tot").textContent = slides.length;
-    var updCar = function () {
-      var max = track.scrollWidth - track.clientWidth;
-      var r = (track.scrollLeft + track.clientWidth) / Math.max(1, track.scrollWidth);
-      fill.style.transform = "scaleX(" + clamp(r, 0, 1).toFixed(3) + ")";
-      var tr = track.getBoundingClientRect(), last = 0;
-      slides.forEach(function (sl, i) {
-        var b = sl.getBoundingClientRect();
-        var vis = Math.max(0, Math.min(b.right, tr.right) - Math.max(b.left, tr.left));
-        var a = clamp(vis / Math.max(1, b.width), 0, 1);
-        sl.style.setProperty("--a", a.toFixed(3));
-        if (a > 0.6) last = i;
-      });
-      cnt.textContent = last + 1;
-      prev.disabled = track.scrollLeft <= 2;
-      next.disabled = track.scrollLeft >= max - 2;
-    };
-    var go = function (d) { track.scrollBy({ left: d * track.clientWidth * 0.85, behavior: reduce ? "auto" : "smooth" }); };
-    prev.addEventListener("click", function () { go(-1); });
-    next.addEventListener("click", function () { go(1); });
-    track.addEventListener("scroll", updCar, { passive: true });
-    window.addEventListener("resize", updCar);
-    track.querySelectorAll("img").forEach(function (im) { im.addEventListener("load", updCar); });
-    track.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
-    });
-    updCar();
-    var down = false, sx = 0, sl0 = 0;
-    track.addEventListener("pointerdown", function (e) {
-      if (e.pointerType !== "mouse" || e.button !== 0) return;
-      down = true; sx = e.clientX; sl0 = track.scrollLeft; track.classList.add("drag");
-    });
-    window.addEventListener("pointermove", function (e) { if (down) track.scrollLeft = sl0 - (e.clientX - sx); });
-    window.addEventListener("pointerup", function () { if (!down) return; down = false; track.classList.remove("drag"); });
-  }
+        /* diagrama: se desenha ao entrar na tela */
+        var diagram = document.querySelector(".diagram");
+        if (diagram) {
+          if (!("IntersectionObserver" in window)) { diagram.classList.add("seen"); }
+          else {
+            var dio = new IntersectionObserver(function (entries) {
+              entries.forEach(function (en) { if (en.isIntersecting) { diagram.classList.add("seen"); dio.disconnect(); } });
+            }, { threshold: 0.35 });
+            dio.observe(diagram);
+          }
+        }
 
-  /* diagrama: se desenha ao entrar na tela */
-  var diagram = document.querySelector(".diagram");
-  if (diagram) {
-    if (!("IntersectionObserver" in window)) { diagram.classList.add("seen"); }
-    else {
-      var dio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { diagram.classList.add("seen"); dio.disconnect(); } });
-      }, { threshold: 0.35 });
-      dio.observe(diagram);
-    }
-  }
+        /* o botão flutuante sai de cena quando o contato ou o rodapé já estão na tela */
+        var fab = document.querySelector(".fab");
+        var closers = document.querySelectorAll("#contato, footer");
+        if (fab && closers.length && "IntersectionObserver" in window) {
+          var seenNow = new Set();
+          var fio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) { if (en.isIntersecting) seenNow.add(en.target); else seenNow.delete(en.target); });
+            fab.classList.toggle("away", seenNow.size > 0);
+          }, { threshold: 0.2 });
+          closers.forEach(function (el) { fio.observe(el); });
+        }
 
-  /* o botão flutuante sai de cena quando o contato ou o rodapé já estão na tela */
-  var fab = document.querySelector(".fab");
-  var closers = document.querySelectorAll("#contato, footer");
-  if (fab && closers.length && "IntersectionObserver" in window) {
-    var seenNow = new Set();
-    var fio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) seenNow.add(en.target); else seenNow.delete(en.target); });
-      fab.classList.toggle("away", seenNow.size > 0);
-    }, { threshold: 0.2 });
-    closers.forEach(function (el) { fio.observe(el); });
-  }
+        if (reduce || !("IntersectionObserver" in window)) return;
 
-  if (reduce || !("IntersectionObserver" in window)) return;
+        /* revelação ao rolar: sempre legível sem JS, escalonada em passos curtos */
+        var groups = [
+          ".principles .wrap > div", "section h2", ".sec-lead", ".about-copy > p", ".about-photo",
+          ".steps li", ".svc-row .arch", ".svc-body", ".assure", ".unsure", ".carousel", ".more",
+          ".faq-list details", ".cta > *", ".cta-actions"
+        ];
+        var els = [];
+        groups.forEach(function (sel) {
+          Array.prototype.forEach.call(document.querySelectorAll(sel), function (el, i) {
+            el.classList.add("reveal");
+            el.style.setProperty("--d", Math.min(i, 3) * 60 + "ms");
+            els.push(el);
+          });
+        });
 
-  /* revelação ao rolar: sempre legível sem JS, escalonada em passos curtos */
-  var groups = [
-    ".principles .wrap > div", "section h2", ".sec-lead", ".about-copy > p", ".about-photo",
-    ".steps li", ".svc-row .arch", ".svc-body", ".assure", ".unsure", ".carousel", ".more",
-    ".faq-list details", ".cta > *", ".cta-actions"
-  ];
-  var els = [];
-  groups.forEach(function (sel) {
-    Array.prototype.forEach.call(document.querySelectorAll(sel), function (el, i) {
-      el.classList.add("reveal");
-      el.style.setProperty("--d", Math.min(i, 3) * 60 + "ms");
-      els.push(el);
-    });
-  });
+        function settle(el) { el.classList.remove("reveal"); el.classList.remove("is-in"); el.style.removeProperty("--d"); }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            var el = en.target;
+            el.classList.add("is-in");
+            io.unobserve(el);
+            setTimeout(function () { settle(el); }, 1000);
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
-  function settle(el) { el.classList.remove("reveal"); el.classList.remove("is-in"); el.style.removeProperty("--d"); }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      var el = en.target;
-      el.classList.add("is-in");
-      io.unobserve(el);
-      setTimeout(function () { settle(el); }, 1000);
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-
-  var vh0 = window.innerHeight || document.documentElement.clientHeight;
-  els.forEach(function (el) {
-    if (el.getBoundingClientRect().top < vh0 * 0.92) settle(el);
-    else io.observe(el);
-  });
-})();
-</script>
+        var vh0 = window.innerHeight || document.documentElement.clientHeight;
+        els.forEach(function (el) {
+          if (el.getBoundingClientRect().top < vh0 * 0.92) settle(el);
+          else io.observe(el);
+        });
+      })();
+  </script>
 </body>
+
 </html>
